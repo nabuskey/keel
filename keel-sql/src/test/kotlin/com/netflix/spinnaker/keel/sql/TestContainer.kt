@@ -19,4 +19,4 @@ internal val mySQLContainer = MySQLContainerProvider()
 
 @Suppress("UsePropertyAccessSyntax")
 private val JdbcDatabaseContainer<*>.authenticatedJdbcUrl: String
-  get() = "${getJdbcUrl()}?user=${getUsername()}&password=${getPassword()}&useSSL=false"
+  get() = "${getJdbcUrl()}?user=${getUsername()}&password=${getPassword()}&enabledTLSProtocols=TLSv1.2"
