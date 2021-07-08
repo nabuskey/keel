@@ -104,7 +104,7 @@ class SqlArtifactRepository(
         .onDuplicateKeyUpdate()
         .set(DELIVERY_ARTIFACT.NAME, artifact.name)
         .set(DELIVERY_ARTIFACT.DETAILS, artifact.detailsAsJson())
-        .execute()
+         .execute()
       jooq.insertInto(ARTIFACT_LAST_CHECKED)
         .set(ARTIFACT_LAST_CHECKED.ARTIFACT_UID, id)
         .set(ARTIFACT_LAST_CHECKED.AT, EPOCH.plusSeconds(1))

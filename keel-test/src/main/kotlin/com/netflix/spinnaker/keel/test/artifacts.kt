@@ -17,7 +17,7 @@ import org.springframework.core.env.Environment
 
 class DummyArtifact(
   override val name: String = "fnord",
-  override val deliveryConfigName: String? = "manifest",
+  override var deliveryConfigName: String? = "manifest",
   override val reference: String = "fnord"
 ) : DeliveryArtifact() {
   override val type: ArtifactType = "dummy"

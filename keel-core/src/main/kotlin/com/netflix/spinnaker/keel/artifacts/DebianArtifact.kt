@@ -14,7 +14,7 @@ import com.netflix.spinnaker.keel.api.artifacts.VirtualMachineOptions
  */
 data class DebianArtifact(
   override val name: String,
-  override val deliveryConfigName: String? = null,
+  override var deliveryConfigName: String? = null,
   override val reference: String = name,
   override val statuses: Set<ArtifactStatus> = emptySet(),
   val vmOptions: VirtualMachineOptions,

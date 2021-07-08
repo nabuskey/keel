@@ -11,7 +11,7 @@ import com.netflix.spinnaker.keel.api.artifacts.SortingStrategy
  */
 data class NpmArtifact(
   override val name: String,
-  override val deliveryConfigName: String? = null,
+  override var deliveryConfigName: String? = null,
   override val reference: String = name,
   override val statuses: Set<ArtifactStatus> = emptySet(),
   override val from: ArtifactOriginFilter? = null

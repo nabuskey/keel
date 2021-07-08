@@ -15,7 +15,7 @@ import com.netflix.spinnaker.kork.web.exceptions.ValidationException
  */
 data class DockerArtifact(
   override val name: String,
-  override val deliveryConfigName: String? = null,
+  override var deliveryConfigName: String? = null,
   override val reference: String = name,
   val tagVersionStrategy: TagVersionStrategy? = null,
   val captureGroupRegex: String? = null,

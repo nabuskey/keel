@@ -94,7 +94,7 @@ abstract class DeliveryArtifact {
 
   /** The delivery config this artifact is a part of. */
   @get:ExcludedFromDiff
-  abstract val deliveryConfigName: String?
+  abstract var deliveryConfigName: String?
 
   /** A set of release statuses to filter by. Mutually exclusive with [from] filters. */
   open val statuses: Set<ArtifactStatus> = emptySet()
